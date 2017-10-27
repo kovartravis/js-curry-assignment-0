@@ -43,8 +43,7 @@ const constructCarts =
       return [...customers].map( c => ({ customer: c.name, 
                                          items: [...entries(c.shoppingList)]
                                                 .map( (a) => itemRepeater(a[0])(a[1])).reduce( (a, c) => a.concat(c))
-                                                .map( (a) => ({ name: a, 
-                                                  price: listings.find( ent => ent.name === a).price }))
+                                                .map( (a) => ({ name: a, price: listings.find( ent => ent.name === a).price }))
       }))
     }
 
